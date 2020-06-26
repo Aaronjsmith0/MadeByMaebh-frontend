@@ -1,18 +1,19 @@
 import React, {useState} from 'react';
 import {Redirect} from 'react-router-dom';
 import Layout from '../core/Layout';
-import {signin} from '../auth';
+import {signin, authenticate, isAuthenticated} from '../auth';
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: '',
-        password: '',
+        email: 'maebh@gmail.com',
+        password: 'pass1234',
         error: '',
         loading: false,
         redirectToReferrer: false,
     })
 
-    const {email, password, loading, error, redirectToReferrer} = values
+    const {email, password, loading, error, redirectToReferrer} = values;
+    const {user} = isAuthenticated()
 
     const handleChange = name => event => {
         setValues({ ...values, error: false, [name]: event.target.value })
@@ -26,9 +27,11 @@ const Signin = () => {
             if(data.error) {
                 setValues({...values, error: data.error, loading: false})
             } else {
-                setValues({
-                    ...values,
-                    redirectToReferrer: true
+                authenticate(data, () => {
+                    setValues({
+                        ...values,
+                        redirectToReferrer: true
+                    })
                 })
             }
         })
@@ -72,14 +75,21 @@ const Signin = () => {
 
     const redirectUser = () => {
         if(redirectToReferrer) {
+            if(user && user.role === 1) {
+                return <Redirect to='/admin/dashboard' />
+            } else {
+                return <Redirect to='/user/dashboard' />
+            }
+        }
+        if(isAuthenticated()) {
             return <Redirect to='/' />
         }
     }
 
     return (
         <Layout 
-            title="Signup" 
-            description="Signup to Node React Ecommerce App"
+            title="Signin" 
+            description="Signin to Node React Ecommerce App"
             className='container col-md-8 offset-md-2'
         >
         {showLoading()}
