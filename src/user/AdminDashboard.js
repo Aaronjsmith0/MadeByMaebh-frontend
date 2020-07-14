@@ -9,7 +9,7 @@ const AdminDashboard = () => {
 
     const adminLinks = () => {
         return (
-            <div className='card'>
+            <div className='adminLinksCard'>
                 <h4 className='card-header'>Admin Links</h4>
                 <ul className='list-group'>
                     <li className='list-group-item'>

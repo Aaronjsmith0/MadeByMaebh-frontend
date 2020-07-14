@@ -19,25 +19,24 @@ const Home = () => {
         })
     }
 
-    const loadProductsBySell = () => {
-        getProducts('sold').then(data => {
-            if(data.error) {
-                setError(data.error)
-            } else {
-                setProductsBySell(data)
-            }
-        })
-    }
+    // const loadProductsBySell = () => {
+    //     getProducts('sold').then(data => {
+    //         if(data.error) {
+    //             setError(data.error)
+    //         } else {
+    //             setProductsBySell(data)
+    //         }
+    //     })
+    // }
 
     useEffect(() => {
         loadProductsByArrival()
-        loadProductsBySell()
+        // loadProductsBySell()
     }, [])
 
     return (
-        <Layout title="Home Page" description="Node React Ecommerce App" className='container-fluid'>
-            <Search />
-            <h2 className='mb-4'>New Arrivals</h2>
+        <Layout title="Home Page" description="Welcome to MadeByMaebh!" className='container-fluid'>
+            <h2 className='mb-4' style={{textAlign: 'center'}}>Most Recent Pieces By Maebh</h2>
             <div className='row'>
                 {productsByArrival.map((product, i) => (
                     <div key={i} className='col-4 mb-3'>
@@ -45,15 +44,15 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-
-            <h2 className='mb-4'>Best Sellers</h2>
+            
+            {/* <h2 className='mb-4'>Best Sellers</h2>
             <div className='row'>
                 {productsBySell.map((product, i) => (
                     <div key={i} className='col-4 mb-3'>
                         <Card product={product} />
                     </div>
                 ))}
-            </div>
+            </div> */}
         </Layout>
     );
 };

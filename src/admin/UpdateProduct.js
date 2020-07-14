@@ -180,7 +180,7 @@ const UpdateProduct = ({match}) => {
     )
 
     return (
-        <Layout title='Add a new product' description={`Hello ${user.name}, make a new product`}>
+        <Layout title='Update an existing product' description={`Hello ${user.name}, update a product`}>
             <div className='row'>
                 <div className='col-md-8 offset-md-2'>
                     {ShowLoading()}

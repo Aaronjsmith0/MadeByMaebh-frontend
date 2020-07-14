@@ -93,12 +93,12 @@ const Search = () => {
                             ))}
                         </select>
                     </div>
-
+                    
                     <input
                         type="search"
                         className="form-control"
                         onChange={handleChange("search")}
-                        placeholder="Search by name"
+                        placeholder="Search for a particular piece"
                     />
                 </div>
                 <div

@@ -23,7 +23,7 @@ const Card = ({
         return (
         showViewProductButton && (
             <Link to={`/product/${product._id}`} className="mr-2">
-                <button className="btn btn-outline-primary mt-2 mb-2 card-btn-1">View Product</button>
+                <button className="btn btn-outline-primary mt-2 mb-2 card-btn-1">View Piece</button>
             </Link>
         )
         );
@@ -52,9 +52,9 @@ const Card = ({
     
     const showStock = quantity => {
         return quantity > 0 ? (
-        <span className="badge badge-primary badge-pill">In Stock </span>
+        <span className="badge badge-primary badge-pill">Available</span>
         ) : (
-        <span className="badge badge-warning badge-pill">Out of Stock </span>
+        <span className="badge badge-warning badge-pill">Sold</span>
         );
     };
     
@@ -104,7 +104,7 @@ const Card = ({
             <p className="card-p  mt-2">{product.description.substring(0, 100)} </p>
             <p className="card-p black-10">$ {product.price}</p>
             <p className="black-9">Category: {product.category && product.category.name}</p>
-            <p className="black-8">Added on {moment(product.createdAt).fromNow()}</p>
+            <p className="black-8">Added {moment(product.createdAt).fromNow()}</p>
             {showStock(product.quantity)}
             <br />
     

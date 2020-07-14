@@ -5,6 +5,7 @@ import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./FixedPrices";
+import Search from './Search';
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -102,7 +103,7 @@ const Shop = () => {
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-4">
+                <div className="col-1">
                     <h4>Filter by Medium</h4>
                     <ul>
                         <Checkbox
@@ -113,7 +114,7 @@ const Shop = () => {
                         />
                     </ul>
 
-                    <h4>Filter by price range</h4>
+                    <h4>Filter by price</h4>
                     <div>
                         <RadioBox
                             prices={prices}
@@ -124,11 +125,12 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-8">
+                <div className="col-11">
+                    <Search />
                     <h2 className="mb-4">Products</h2>
-                    <div className="row">
+                    <div className="row mr-5">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className='col-4 mb-3'>
+                            <div key={i} className='mr-3 mb-3'>
                                 <Card product={product} />
                             </div>
                         ))}

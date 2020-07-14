@@ -27,7 +27,7 @@ const Dashboard = () => {
 
     const userLinks = () => {
         return (
-            <div className='card'>
+            <div className='userLinksCard'>
                 <h4 className='card-header'>User Links</h4>
                 <ul className='list-group'>
                     <li className='list-group-item'>
