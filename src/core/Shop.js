@@ -103,7 +103,7 @@ const Shop = () => {
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-1">
+                <div className="col-2">
                     <h4>Filter by Medium</h4>
                     <ul>
                         <Checkbox
@@ -125,7 +125,7 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-11">
+                <div className="col-10">
                     <Search />
                     <h2 className="mb-4">Products</h2>
                     <div className="row mr-5">

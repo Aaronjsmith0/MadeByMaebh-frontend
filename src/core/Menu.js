@@ -13,7 +13,7 @@ const isActive = (history, path) => {
 
 const Menu = ({history}) => (
         <div className='row'>
-            <div className='col-11 navBarLinks'>
+            <div className='col-10 navBarLinks'>
                 <ul className="nav nav-tabs">
                     <li className="nav-item">
                         <Link className="nav-link" style={isActive(history, '/')} to="/">Home</Link>
@@ -62,7 +62,7 @@ const Menu = ({history}) => (
                     )}
                 </ul>
             </div>
-            <div className='col-1 madeByMaebh'>
+            <div className='col-2 madeByMaebh'>
                 <span className='navbar-text'>MadeByMaebh.</span>
             </div>
         </div>

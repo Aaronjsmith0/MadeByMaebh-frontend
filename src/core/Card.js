@@ -80,6 +80,7 @@ const Card = ({
         // )
         );
     };
+
     const showRemoveButton = showRemoveProductButton => {
         return (
         showRemoveProductButton && (
@@ -95,6 +96,7 @@ const Card = ({
         )
         );
     };
+    
     return (
         <div className="card ">
             <div className="card-header card-header-1 name">{product.name}</div>
