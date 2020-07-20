@@ -35,7 +35,7 @@ const Home = () => {
     }, [])
 
     return (
-        <Layout title="Home Page" description="Welcome to MadeByMaebh!" className='container-fluid'>
+        <Layout title="MadeByMaebh" description="Welcome to MadeByMaebh!" className='container-fluid'>
             <h2 className='mb-4' style={{textAlign: 'center'}}>Most Recent Pieces By Maebh</h2>
             <div className='row'>
                 {productsByArrival.map((product, i) => (
