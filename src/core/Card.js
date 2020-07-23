@@ -69,15 +69,6 @@ const Card = ({
     const showCartUpdateOptions = cartUpdate => {
         return (
             cartUpdate 
-        //     <div>
-        //     <div className="input-group mb-3">
-        //         <div className="input-group-prepend">
-        //         <span className="input-group-text">Adjust Quantity</span>
-        //         </div>
-        //         <input type="number" className="form-control" value={count} onChange={handleChange(product._id)} />
-        //     </div>
-        //     </div>
-        // )
         );
     };
 
@@ -85,13 +76,13 @@ const Card = ({
         return (
         showRemoveProductButton && (
             <button
-            onClick={() => {
-                removeItem(product._id);
-                setRun(!run); // run useEffect in parent Cart
-            }}
-            className="btn btn-outline-danger mt-2 mb-2"
+                onClick={() => {
+                    removeItem(product._id);
+                    setRun(!run); // run useEffect in parent Cart
+                }}
+                className="btn btn-outline-danger mt-2 mb-2"
             >
-            Remove Product
+                Remove Product
             </button>
         )
         );
