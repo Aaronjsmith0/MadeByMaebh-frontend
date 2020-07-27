@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Layout from './Layout';
+import HomeJumbotron from './HomeJumbotron';
 import { getProducts } from './apiCore';
 import Card from './Card';
-import Search from './Search';
+import Footer from './Footer';
 
 const Home = () => {
     const [productsByArrival, setProductsByArrival] = useState([])
@@ -20,22 +20,22 @@ const Home = () => {
 
     useEffect(() => {
         loadProductsByArrival()
-        // loadProductsBySell()
     }, [])
 
     return (
-        <Layout title="MadeByMaebh" description="Welcome to MadeByMaebh!" className='container-fluid'>
-            <h2 className='mb-4' style={{textAlign: 'center'}}>Most Recent Pieces By Maebh</h2>
-            <div className='container-fluid'>
+        <HomeJumbotron title="MadeByMaebh" description="Welcome to MadeByMaebh" className="container-fluid">
+            <div class="separator mb-4">Most Recent Pieces By Maebh</div>
+            <div className='container'>
                 <div className='row'>
                     {productsByArrival.map((product, i) => (
-                        <div key={i} className='col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-3'>
+                        <div key={i} className='col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-3'>
                             <Card product={product} />
                         </div>
                     ))}
                 </div>
             </div>
-        </Layout>
+            <Footer />
+        </HomeJumbotron>
     );
 };
 

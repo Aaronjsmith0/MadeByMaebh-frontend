@@ -22,8 +22,8 @@ const Card = ({
     const showViewButton = showViewProductButton => {
         return (
         showViewProductButton && (
-            <Link to={`/product/${product._id}`} className="mr-2">
-                <button className="btn btn-outline-primary mt-2 mb-2 card-btn-1">View Piece</button>
+            <Link to={`/product/${product._id}`} className="">
+                <ShowImage item={product} url="product" />
             </Link>
         )
         );
@@ -43,18 +43,18 @@ const Card = ({
     const showAddToCartBtn = showAddToCartButton => {
         return (
         showAddToCartButton && (
-            <button onClick={addToCart} className="btn btn-outline-warning mt-2 mb-2 card-btn-1  ">
-            Add to cart
-            </button>
+            <span onClick={addToCart} className=" btn badge badge-secondary">
+                Add to cart
+            </span>
         )
         );
     };
     
     const showSold = quantity => {
         return quantity > 0 ? (
-        <span className="badge badge-primary badge-pill">Available</span>
+            showAddToCartBtn(showAddToCartButton)
         ) : (
-        <span className="badge badge-warning badge-pill">Sold</span>
+            <span className="badge badge-secondary">Sold</span>
         );
     };
     
@@ -89,24 +89,18 @@ const Card = ({
     };
     
     return (
-        <div className="card ">
-            <div className="card-header card-header-1 name">{product.name}</div>
+        <div className="card">
+            {showViewButton(showViewProductButton)}
             <div className="card-body">
                 {shouldRedirect(redirect)}
-                <ShowImage item={product} url="product" />
-                <p className="card-p  mt-2">{product.description.substring(0, 100)} </p>
-                <p className="card-p black-10">$ {product.price}</p>
-                {/* <p className="card-p black-9">Category: {product.category && product.category.name}</p> */}
-                {/* <p className="card-p black-8">Added {moment(product.createdAt).fromNow()}</p> */}
-                {showSold(product.quantity)}
+                <p className="card-text card-p">{product.name}</p>
+                <p className="card-text card-p">${product.price}</p>
+                <div className='showSold'>
+                    {showSold(product.quantity)}
+                </div>
                 <br />
-        
-                {showViewButton(showViewProductButton)}
-        
-                {showAddToCartBtn(showAddToCartButton)}
-        
                 {showRemoveButton(showRemoveProductButton)}
-        
+                
                 {showCartUpdateOptions(cartUpdate)}
             </div>
         </div>
@@ -116,5 +110,25 @@ const Card = ({
 export default Card;
 
 
-
+        // <div className="card ">
+        //     <div className="card-header card-header-1 name">{product.name}</div>
+        //     <div className="card-body">
+        //         {shouldRedirect(redirect)}
+        //         <ShowImage item={product} url="product" />
+        //         <p className="card-p  mt-2">{product.description.substring(0, 100)} </p>
+        //         <p className="card-p black-10">$ {product.price}</p>
+        //         {/* <p className="card-p black-9">Category: {product.category && product.category.name}</p> */}
+        //         {/* <p className="card-p black-8">Added {moment(product.createdAt).fromNow()}</p> */}
+        //         {showSold(product.quantity)}
+        //         <br />
+        
+        //         {showViewButton(showViewProductButton)}
+        
+        //         {showAddToCartBtn(showAddToCartButton)}
+        
+        //         {showRemoveButton(showRemoveProductButton)}
+        
+        //         {showCartUpdateOptions(cartUpdate)}
+        //     </div>
+        // </div>
 

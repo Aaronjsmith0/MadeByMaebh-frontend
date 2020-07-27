@@ -47,7 +47,7 @@ const Product = (props) => {
                         product.description &&
                         <Card 
                             product={product} 
-                            showViewProductButton={false}
+                            showViewProductButton={true}
                         />
                     }
                 </div>
