@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <HomeJumbotron title="MadeByMaebh" description="Welcome to MadeByMaebh" className="container-fluid">
-            <div class="separator mb-4">Most Recent Pieces By Maebh</div>
+            <div className="separator mb-4">Most Recent Pieces By Maebh</div>
             <div className='container'>
                 <div className='row'>
                     {productsByArrival.map((product, i) => (

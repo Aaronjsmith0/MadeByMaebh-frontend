@@ -7,7 +7,7 @@
     font-size: 15px;
     font-style: bold;
     color: white;
-    background: #ff1493;
+    background: #e73c7e;
 }
 
 /*madebymaebh logo*/
@@ -94,5 +94,22 @@
 .separator::after {
     margin-left: .25em;
 }
+
+/* about page */
+
+.aboutP {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+
+
+/* footer */
+
+.fab {
+    color: #e73c7e;
+}
+
+
 
 

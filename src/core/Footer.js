@@ -38,21 +38,19 @@ const Footer = () => {
                     <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
                         <h6 className="text-uppercase font-weight-bold mb-4">Company</h6>
                         <ul className="list-unstyled mb-0">
-                            <li className="mb-2"><a href="#" className="text-muted">Login</a></li>
-                            <li className="mb-2"><a href="#" className="text-muted">Register</a></li>
-                            <li className="mb-2"><a href="#" className="text-muted">Sitemap</a></li>
-                            <li className="mb-2"><a href="#" className="text-muted">Our Products</a></li>
+                            <li className="mb-2"><a href="https://madebymaebh.com/signin" className="text-muted">Signin</a></li>
+                            <li className="mb-2"><a href="https://madebymaebh.com/signup" className="text-muted">Signup</a></li>
+                            <li className="mb-2"><a href="https://madebymaebh.com/shop" className="text-muted">My Pieces</a></li>
                         </ul>
                     </div>
                     <div className="col-lg-4 col-md-6 mb-lg-0">
                         <h6 className="text-uppercase font-weight-bold mb-4">Registered Office Address</h6>
                         <p className="text-muted mb-4">Here , write the complete address of the Registered office address along with telephone number.</p>
                         <ul className="list-inline mt-4">
+                            <li className="list-inline-item"><a href="https://www.instagram.com/madebymaebh/?hl=en" target="_blank" title="instagram"><i className="fab fa-2x fa-instagram"></i></a></li>
+                            <li className="list-inline-item"><a href="https://www.facebook.com/madebymaebh/" target="_blank" title="facebook"><i className="fab fa-2x fa-facebook"></i></a></li>
                             <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i className="fab fa-2x fa-twitter"></i></a></li>
-                            <li className="list-inline-item"><a href="#" target="_blank" title="facebook"><i className="fab fa-2x fa-facebook-f"></i></a></li>
-                            <li className="list-inline-item"><a href="#" target="_blank" title="instagram"><i className="fab fa-2x fa-instagram"></i></a></li>
-                            <li className="list-inline-item"><a href="#" target="_blank" title="pinterest"><i className="fab fa-2x fa-youtube"></i></a></li>
-                            <li className="list-inline-item"><a href="#" target="_blank" title="vimeo"><i className="fab fa-2x fa-google"></i></a></li>
+                            <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i className="fab fa-2x fa-pinterest"></i></a></li>
                         </ul>
                     </div>
                 </div>
