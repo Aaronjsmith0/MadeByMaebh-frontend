@@ -7,7 +7,7 @@ import RadioBox from "./RadioBox";
 import Footer from './Footer';
 import { prices } from "./FixedPrices";
 import Search from './Search';
-import { Dropdown } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
