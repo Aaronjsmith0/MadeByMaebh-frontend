@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Menu from './Menu';
 import '../styles.css';
-import MaebhStanding from '../images/maebhStanding.jpg';
+import MaebhSelf from '../images/maebhSelf.JPG';
 import Footer from './Footer';
 
 const About = () => {
@@ -10,8 +10,8 @@ const About = () => {
         <div className='container-fluid'>
             <Menu />
             <div className="separator mb-4 mt-5">About Maebh</div>
-            <img src={MaebhStanding} className='maebhStandingPic mb-4' />
-            <div className='aboutP'>
+            <img src={MaebhSelf} className='maebhSelfPic mb-4' />
+            <div className='aboutP col-lg-8 col-md-10 col-sm-10 col-xs-6'>
                 <p>
                     Excepteur elit commodo pariatur mollit ea et excepteur deserunt incididunt esse amet elit est. Culpa velit pariatur ex consequat velit et. Lorem exercitation irure eiusmod laboris occaecat eu in incididunt mollit ea exercitation ea aliquip.
 

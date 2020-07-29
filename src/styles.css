@@ -16,7 +16,6 @@
     background-color: white;
     font: bold;
     color: #e73c7e;
-    font-family: cursive;
     font-size: large;
 }
 
@@ -58,11 +57,10 @@
 
 /* home jumbotron */
 .maebhStandingPic {
-    height: 550px;
-    width: 400px;
     object-fit: cover;
-    margin: auto;    
+    /* margin: auto;     */
     display: block;
+    margin-left: auto;
 }
 
 .homeJumbotron {
@@ -71,7 +69,6 @@
 
 .homeJumboDescription {
     margin: auto;    
-    text-align: center;
 }
 
 /* home page */
@@ -89,20 +86,44 @@
     border-bottom: 1px solid #000;
 }
 .separator::before {
-    margin-right: .25em;
+    margin-right: .5em;
 }
 .separator::after {
-    margin-left: .25em;
+    margin-left: .5em;
 }
 
 /* about page */
 
-.aboutP {
-    margin-left: 10rem;
-    margin-right: 10rem;
+.maebhSelfPic {
+    object-fit: cover;
+    margin: auto;    
+    display: block;
 }
 
+.aboutP {
+    margin: auto;    
+    display: block;
+}
 
+/* shop page */
+
+.shopDrop {
+    margin: auto;    
+    display: block;
+    text-align: center;
+}
+
+.shopCards {
+    justify-content: center;
+}
+
+.filterBtn {
+    background-color: white;
+    font: bold;
+    color: #e73c7e;
+    font-size: large;
+    border: none;
+}
 
 /* footer */
 

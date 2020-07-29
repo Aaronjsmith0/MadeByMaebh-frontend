@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./Layout";
+import Menu from "./Menu";
 import Card from "./Card";
 import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
+import Footer from './Footer';
 import { prices } from "./FixedPrices";
 import Search from './Search';
+import { Dropdown } from 'react-bootstrap';
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -13,7 +15,7 @@ const Shop = () => {
     });
     const [categories, setCategories] = useState([]);
     const [error, setError] = useState(false);
-    const [limit, setLimit] = useState(6);
+    const [limit, setLimit] = useState(8);
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);
@@ -59,7 +61,7 @@ const Shop = () => {
         return (
             size > 0 &&
             size >= limit && (
-                <button onClick={loadMore} className="btn btn-warning mb-5">
+                <button onClick={loadMore} className="filterBtn mb-5">
                     Load more Products
                 </button>
             )
@@ -97,13 +99,47 @@ const Shop = () => {
     };
 
     return (
-        <Layout
-            title="Shop Page"
-            description="Search products by medium and price"
-            className="container-fluid"
-        >
-            <div className="row">
-                <div className="col-2">
+        <div className='container-fluid'>
+            <Menu />
+            <div className="separator mb-4 mt-5">Shop</div>
+                <div className="">
+                    <div className='shopDrop'>
+                        <Dropdown className='noHover mb-5'>
+                            <Dropdown.Toggle className='filterBtn' variant="none">
+                                Filter by Medium
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Checkbox
+                                    categories={categories}
+                                    handleFilters={filters =>
+                                        handleFilters(filters, "category")
+                                    }
+                                />
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+                    <div className='container'>
+                        <div className="row shopCards">
+                            {filteredResults.map((product, i) => (
+                                <div key={i} className='mr-3 mb-3'>
+                                    <Card product={product} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className='shopDrop'>
+                        {loadMoreButton()}
+                    </div>
+                </div>
+                <Footer />
+        </div>
+    );
+};
+
+export default Shop;
+
+
+                {/* <div className="col-2">
                     <h4>Filter by Medium</h4>
                     <ul>
                         <Checkbox
@@ -114,7 +150,7 @@ const Shop = () => {
                         />
                     </ul>
 
-                    <h4>Filter by price</h4>
+                    {/* <h4>Filter by price</h4>
                     <div>
                         <RadioBox
                             prices={prices}
@@ -122,29 +158,6 @@ const Shop = () => {
                                 handleFilters(filters, "price")
                             }
                         />
-                    </div>
-                </div>
-
-                <div className="col-10">
-                    <Search />
-                    <h2 className="mb-4">Products</h2>
-                    <div className="row mr-5">
-                        {filteredResults.map((product, i) => (
-                            <div key={i} className='mr-3 mb-3'>
-                                <Card product={product} />
-                            </div>
-                        ))}
-                    </div>
-                    <hr />
-                    {loadMoreButton()}
-                </div>
-            </div>
-        </Layout>
-    );
-};
-
-export default Shop;
-
-
-
+                    </div> */}
+                {/* </div> */} 
 

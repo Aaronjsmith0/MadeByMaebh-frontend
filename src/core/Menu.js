@@ -35,7 +35,7 @@ const Menu = ({history}) => {
     return (
         
 
-        <div>
+        <div className='container-fluid'>
             <Navbar color="white" light expand="md">
             <NavbarBrand href="/">
                 <span className='navbar-header'>madebymaebh.</span>
