@@ -104,7 +104,7 @@ const Shop = () => {
             <div className="separator mb-4 mt-5">Shop</div>
                 <div className="">
                     <div className='shopDrop'>
-                        <Dropdown className='noHover mb-5'>
+                        {/* <Dropdown className='noHover mb-5'>
                             <Dropdown.Toggle className='filterBtn' variant="none">
                                 Filter by Medium
                             </Dropdown.Toggle>
@@ -116,7 +116,7 @@ const Shop = () => {
                                     }
                                 />
                             </Dropdown.Menu>
-                        </Dropdown>
+                        </Dropdown> */}
                     </div>
                     <div className='container'>
                         <div className="row shopCards">
