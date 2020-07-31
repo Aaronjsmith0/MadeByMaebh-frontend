@@ -1,5 +1,5 @@
 
-/*cart badge*/
+/*Navbar*/
 .cart-badge,
 .cart-badge:hover {
     border-radius: 50%;
@@ -10,7 +10,6 @@
     background: #e73c7e;
 }
 
-/*madebymaebh logo*/
 .navbar-header
 {
     background-color: white;
@@ -19,18 +18,8 @@
     font-size: large;
 }
 
-/* shopping bag */
 .shoppingbag {
     height: 25px;
-}
-
-/*product image on card */
-
-.product-img {
-    height: 20rem;
-    width: auto;
-    display: flex;
-    justify-content: center;
 }
 
 /* card */
@@ -38,6 +27,13 @@
     height: fit-content;
     width: auto;
     border: none;
+}
+
+.product-img {
+    height: 20rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .card-p {
@@ -58,9 +54,8 @@
 /* home jumbotron */
 .maebhStandingPic {
     object-fit: cover;
-    /* margin: auto;     */
+    margin: auto;    
     display: block;
-    margin-left: auto;
 }
 
 .homeJumbotron {
@@ -69,6 +64,37 @@
 
 .homeJumboDescription {
     margin: auto;    
+}
+
+/* Slideshow */
+
+.each-fade {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.each-fade  img {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.slideButton {
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: solid black 1px;
+    cursor: pointer !important;
 }
 
 /* home page */

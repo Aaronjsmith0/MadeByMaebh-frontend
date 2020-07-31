@@ -23,7 +23,7 @@ const Home = () => {
     }, [])
 
     return (
-        <HomeJumbotron title="MadeByMaebh" description="Welcome to MadeByMaebh" className="container-fluid">
+        <HomeJumbotron title="MadeByMaebh" description="" className="container-fluid">
             <div className="separator mb-4 mr-5 ml-5">Most Recent Pieces By Maebh</div>
             <div className='container'>
                 <div className='row'>
