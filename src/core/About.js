@@ -7,11 +7,11 @@ import Footer from './Footer';
 const About = () => {
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Menu />
             <div className="separator mb-4 mt-5">About Maebh</div>
             <img src={MaebhSelf} className='maebhSelfPic mb-4' />
-            <div className='aboutP col-lg-8 col-md-10 col-sm-10 col-xs-6'>
+            <div className='aboutP col-lg-10 col-md-10 col-sm-10 col-xs-6'>
                 <p>
                     Excepteur elit commodo pariatur mollit ea et excepteur deserunt incididunt esse amet elit est. Culpa velit pariatur ex consequat velit et. Lorem exercitation irure eiusmod laboris occaecat eu in incididunt mollit ea exercitation ea aliquip.
 

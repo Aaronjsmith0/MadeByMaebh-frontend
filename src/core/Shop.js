@@ -7,7 +7,7 @@ import RadioBox from "./RadioBox";
 import Footer from './Footer';
 import { prices } from "./FixedPrices";
 import Search from './Search';
-//import Dropdown from 'react-bootstrap/Dropdown';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -99,12 +99,12 @@ const Shop = () => {
     };
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Menu />
             <div className="separator mb-4 mt-5">Shop</div>
                 <div className="">
                     <div className='shopDrop'>
-                        {/* <Dropdown className='noHover mb-5'>
+                        <Dropdown className='noHover mb-5'>
                             <Dropdown.Toggle className='filterBtn' variant="none">
                                 Filter by Medium
                             </Dropdown.Toggle>
@@ -116,7 +116,7 @@ const Shop = () => {
                                     }
                                 />
                             </Dropdown.Menu>
-                        </Dropdown> */}
+                        </Dropdown>
                     </div>
                     <div className='container'>
                         <div className="row shopCards">
@@ -137,18 +137,6 @@ const Shop = () => {
 };
 
 export default Shop;
-
-
-                {/* <div className="col-2">
-                    <h4>Filter by Medium</h4>
-                    <ul>
-                        <Checkbox
-                            categories={categories}
-                            handleFilters={filters =>
-                                handleFilters(filters, "category")
-                            }
-                        />
-                    </ul>
 
                     {/* <h4>Filter by price</h4>
                     <div>

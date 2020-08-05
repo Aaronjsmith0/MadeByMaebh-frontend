@@ -93,8 +93,13 @@
     font-size: 20px;
     padding: 12px 24px;
     background-color: transparent;
-    border: solid black 1px;
+    border: solid white 1px;
     cursor: pointer !important;
+}
+
+.slideButton:hover {
+    background-color: #000;
+    color: white;
 }
 
 /* home page */

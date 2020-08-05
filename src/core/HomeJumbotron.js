@@ -8,7 +8,7 @@ const HomeJumbotron = ({title = 'Title', description = 'Description', className,
     <div className='container'>
         <Menu />
         <div className="jumbotron homeJumbotron">
-            <div className="separator mb-4 mt-2 mr-4 ml-4">{title}</div>
+            <div className="separator mb-4 ">{title}</div>
             <Slideshow />
         </div>
         <div className={className}>{children}</div>
