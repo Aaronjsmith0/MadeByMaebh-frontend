@@ -47,10 +47,10 @@ const Footer = () => {
                         <h6 className="text-uppercase font-weight-bold mb-4">Registered Office Address</h6>
                         <p className="text-muted mb-4">Here , write the complete address of the Registered office address along with telephone number.</p>
                         <ul className="list-inline mt-4">
-                            <li className="list-inline-item"><a href="https://www.instagram.com/madebymaebh/?hl=en" target="_blank" title="instagram"><i className="fab fa-2x fa-instagram"></i></a></li>
-                            <li className="list-inline-item"><a href="https://www.facebook.com/madebymaebh/" target="_blank" title="facebook"><i className="fab fa-2x fa-facebook"></i></a></li>
-                            <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i className="fab fa-2x fa-twitter"></i></a></li>
-                            <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i className="fab fa-2x fa-pinterest"></i></a></li>
+                            <li className="list-inline-item"><a href="https://www.instagram.com/madebymaebh/?hl=en" target="_blank" title="instagram"><i className="fab fa-2x fa-instagram footerIcon"></i></a></li>
+                            <li className="list-inline-item"><a href="https://www.facebook.com/madebymaebh/" target="_blank" title="facebook"><i className="fab fa-2x fa-facebook footerIcon"></i></a></li>
+                            <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i className="fab fa-2x fa-twitter footerIcon"></i></a></li>
+                            <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i className="fab fa-2x fa-pinterest footerIcon"></i></a></li>
                         </ul>
                     </div>
                 </div>

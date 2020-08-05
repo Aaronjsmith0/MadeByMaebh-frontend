@@ -17,6 +17,7 @@ import Orders from './admin/Orders';
 import Profile from './user/Profile';
 import ManageProducts from './admin/ManageProducts';
 import UpdateProduct from './admin/UpdateProduct';
+import Instagram from './core/Instagram';
 
 
 
@@ -26,6 +27,7 @@ const Routes = () => {
             <Route path="/" exact component={Home} />
             <Route path="/shop" exact component={Shop} />
             <Route path="/about" exact component={About} />
+            <Route path="/instagram" exact component={Instagram} />
             <Route path="/signin" exact component={Signin} />
             <Route path="/signup" exact component={Signup} />
             <PrivateRoute path='/user/dashboard' exact component={Dashboard} />

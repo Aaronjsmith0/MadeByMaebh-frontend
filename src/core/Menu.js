@@ -53,7 +53,7 @@ const Menu = ({history}) => {
                         <NavLink href="/about" style={isActive(history, '/about')}>About</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://www.instagram.com/madebymaebh/?hl=en" style={isActive(history, 'https://www.instagram.com/madebymaebh/?hl=en')} target="_blank">Instagram</NavLink>
+                        <NavLink href="/instagram" style={isActive(history, '/instagram')}>Instagram</NavLink>
                     </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret style={{color: '#ff1493'}}>
